@@ -152,7 +152,6 @@ function loadRandomQuote() {
         "\"<a><i>It is not the strongest of the species that survives, nor the most intelligent that survives. It is the one that is most adaptable to change.</i></a>\" - Charles Darwin.<br>",
         "\"<a><i>School taught us that your skull is designed to protect your brain, you reach the streets and you realize that your brain is what you use to protect your skull.</i></a>\" - Bamodu.<br>",
         "\"<a><i>Don't waste your time chasing butterflies. Mend your garden, and the butterflies will come.</i></a>\" - Mário Quintana.<br>",
-
     ]
     return quotes[Math.floor(Math.random() * quotes.length)];
 }

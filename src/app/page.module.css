@@ -1,0 +1,44 @@
+.main {
+  padding: 20px;
+  color: #dfdfdf;
+  font-family: "Roboto Mono";
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0 auto;
+  max-width: 960px;
+  text-align: center;
+}
+
+.pre {
+  color: #6079aa;
+}
+
+.a {
+  color: #6079aa;
+  text-decoration: none;
+}
+
+.quote {
+  color: #6079aa;
+  font-style: italic;
+  text-decoration: none;
+}
+.quote:hover {
+  color: #51afef;
+}
+
+.h1 {
+  font-size: 20px;
+  color: #dfdfdf;
+  margin-bottom: 0px;
+}
+
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-size: 16px;
+  color: #6079aa;
+  margin-bottom: 0px;
+}
