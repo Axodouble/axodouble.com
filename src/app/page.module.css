@@ -7,10 +7,7 @@
   margin: 0 auto;
   max-width: 960px;
   text-align: center;
-}
-
-.pre {
-  color: #6079aa;
+  text-decoration: none;
 }
 
 .a {
@@ -27,10 +24,13 @@
   color: #51afef;
 }
 
+.person {
+  color: #dfdfdf;
+  text-decoration: none;
+}
+
 .h1 {
   font-size: 20px;
-  color: #dfdfdf;
-  margin-bottom: 0px;
 }
 
 .h2,

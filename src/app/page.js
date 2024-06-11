@@ -11,7 +11,7 @@ export default function Home() {
       </a>
       Welcome to axodouble.com, <a className={styles.a} href='https://discord.gg/Um7dr5vYK4'>join my discord</a>!<br /><br />
       <h3 className={styles.h3}>Random Quote.</h3>
-      "<a className={styles.quote} href={quote.quote.link}>{quote.quote.text}</a>" - <a className={styles.a} href={quote.user.link}>{quote.user.text}</a>.
+      "<a className={styles.quote} href={quote.quote.link}>{quote.quote.text}</a>" - <a className={styles.person} href={quote.user.link}>{quote.user.text}</a>.
     </main>
   );
 }
