@@ -9,7 +9,7 @@ export default function Home() {
       <a className={styles.a} href="https://axodouble.com/">
         <h1 className={styles.h1}>AXODOUBLE.COM</h1>
       </a>
-      Welcome to axodouble.com, <a href='https://xdbl.dev/?l=0eSF3'>join</a> my <a href='https://xdbl.dev/?l=0eSF3'>discord</a>!<br /><br />
+      Welcome to axodouble.com, <a className={styles.a} href='https://xdbl.dev/?l=0eSF3'>join my discord</a>!<br /><br />
       <h3 className={styles.h3}>Random Quote.</h3>
       "<a className={styles.quote} href={quote.quote.link}>{quote.quote.text}</a>" - <a>{quote.user.text}</a>.
     </main>
