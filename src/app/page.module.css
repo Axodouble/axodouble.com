@@ -6,6 +6,7 @@
   line-height: 22px;
   margin: 0 auto;
   max-width: 960px;
+  text-align: center;
 }
 
 .pre {
@@ -17,31 +18,15 @@
   text-decoration: none;
 }
 
-.a:hover {
+.quote {
+  color: #6079aa;
+  font-style: italic;
+  text-decoration: none;
+}
+.quote:hover {
   color: #51afef;
 }
 
-.b {
-  color: #dfdfdf;
-}
-.b:hover {
-  color: #51afef;
-}
-
-.c {
-  color: #dfdfdf;
-}
-.c:hover {
-  color: #51afef;
-}
-
-.img {
-  border-radius: 13px;
-}
-
-.tiny {
-  font-size: 9px;
-}
 .h1 {
   font-size: 20px;
   color: #dfdfdf;
@@ -56,27 +41,4 @@
   font-size: 16px;
   color: #6079aa;
   margin-bottom: 0px;
-}
-
-.li {
-  color: #6079aa;
-}
-
-.p {
-  padding: 0px;
-  margin: 0px;
-}
-
-.parent {
-  text-align: center;
-}
-
-.ul,
-.ol {
-  text-align: left;
-}
-
-.blockquote {
-  display: inline-block;
-  text-align: left;
 }
