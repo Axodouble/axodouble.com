@@ -108,7 +108,7 @@ function getRandomQuote() {
         "user": { "text": "Mário Quintana", "link": undefined }
       },
       {
-        "quote": { "text": "I am da biggest bird.", "link": "https://youtu.be/Nr3355jvoXY?si=BDnuVQmLwCF1wVKl&t=14" },
+        "quote": { "text": "I am da biggest bird.", "link": "https://youtu.be/Nr3355jvoXY&t=14" },
         "user": { "text": "Stan", "link": undefined }
       },
       {
