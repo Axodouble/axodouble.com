@@ -106,6 +106,18 @@ function getRandomQuote() {
       {
         "quote": { "text": "Don't waste your time chasing butterflies. Mend your garden, and the butterflies will come.", "link": undefined },
         "user": { "text": "Mário Quintana", "link": undefined }
+      },
+      {
+        "quote": { "text": "I am da biggest bird.", "link": "https://youtu.be/Nr3355jvoXY?si=BDnuVQmLwCF1wVKl&t=14" },
+        "user": { "text": "Stan", "link": undefined }
+      },
+      {
+        "quote": { "text": "There are no laws against the pokemon, batman.", "link": "https://www.youtube.com/watch?v=VZllAa1odpU" },
+        "user": { "text": "Dylan", "link": undefined }
+      },
+      {
+        "quote": { "text": "Do you think the children have 20 or fewer hitpoints?", "link": "https://www.youtube.com/shorts/NM08hquwic4" },
+        "user": { "text": "Jasperagus", "link": undefined }
       }
     ]
 
