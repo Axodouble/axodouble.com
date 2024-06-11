@@ -3,8 +3,8 @@ FROM node:alpine
 
 #Install some dependencies
 
-WORKDIR /usr/app
-COPY ./ /usr/app
+WORKDIR /var/www/html
+COPY ./ /var/www/html
 RUN npm install
 
 # Set up a default command
