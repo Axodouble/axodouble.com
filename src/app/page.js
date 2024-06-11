@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import { unstable_noStore as noStore } from 'next/cache';
 
 export default function Home() {
   let quote = getRandomQuote();
@@ -109,5 +110,6 @@ function getRandomQuote() {
     ]
 
   let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  noStore()
   return randomQuote;
 }
