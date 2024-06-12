@@ -6,12 +6,16 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <a className={styles.a} href="https://axodouble.com/">
+      <a className={styles.normal} href="https://axodouble.com/">
         <h1 className={styles.h1}>AXODOUBLE.COM</h1>
       </a>
-      Welcome to axodouble.com, <a className={styles.a} href='https://discord.gg/Um7dr5vYK4'>join my discord</a>!<br /><br />
-      <h3 className={styles.h3}>Random Quote.</h3>
-      "<a className={styles.quote} href={quote.quote.link}>{quote.quote.text}</a>" - <a className={styles.person} href={quote.user.link}>{quote.user.text}</a>.
+      <intro className={styles.normal}>Welcome to axodouble.com, <a className={styles.inversehighlight} href='https://discord.gg/Um7dr5vYK4'>join my discord</a>!<br /><br /></intro>
+      <h3 className={styles.h3}>Contact me.</h3>
+      <a className={styles.highlight} href="mailto:axodouble@axodouble.com">Mail.</a><br />
+      <a className={styles.highlight} href="https://discord.gg/Um7dr5vYK4">Discord.</a><br /><br />
+
+      <h3 className={styles.h3}>Quote.</h3>
+      "<i><a className={styles.inversehighlight} href={quote.quote.link}>{quote.quote.text}</a></i>" - <a className={styles.inverse} href={quote.user.link}>{quote.user.text}</a>.
     </main>
   );
 }

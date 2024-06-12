@@ -1,6 +1,6 @@
 .main {
   padding: 20px;
-  color: #dfdfdf;
+  color: #6079aa;
   font-family: "Roboto Mono";
   font-size: 14px;
   line-height: 22px;
@@ -10,23 +10,27 @@
   text-decoration: none;
 }
 
-.a {
+.normal {
   color: #6079aa;
   text-decoration: none;
 }
-
-.quote {
-  color: #6079aa;
-  font-style: italic;
-  text-decoration: none;
-}
-.quote:hover {
-  color: #51afef;
-}
-
-.person {
+.inverse {
   color: #dfdfdf;
   text-decoration: none;
+}
+.highlight {
+  color: #dfdfdf;
+  text-decoration: none;
+}
+.highlight:hover {
+  color: #6079aa;
+}
+.inversehighlight {
+  color: #6079aa;
+  text-decoration: none;
+}
+.inversehighlight:hover {
+  color: #dfdfdf;
 }
 
 .h1 {
