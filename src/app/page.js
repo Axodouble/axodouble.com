@@ -26,7 +26,7 @@ export default function Home() {
 
       {quote && (
         <>
-          <h3 className={styles.h3}>Quote</h3>
+          <h3 className={styles.h3}>Quote.</h3>
           <p>
             "<i><a className={styles.inversehighlight} href={quote.quote.link || '#'}>{quote.quote.text}</a></i>"
             - <a className={styles.inverse} href={quote.user.link || '#'}>{quote.user.text}</a>
