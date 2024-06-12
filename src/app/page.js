@@ -1,21 +1,38 @@
+"use client"
 import styles from "./page.module.css";
-import { unstable_noStore as noStore } from 'next/cache';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
-  let quote = getRandomQuote();
+  const [quote, setQuote] = useState(null);
+
+  useEffect(() => {
+    setQuote(getRandomQuote());
+  }, []);
 
   return (
     <main className={styles.main}>
       <a className={styles.normal} href="https://axodouble.com/">
         <h1 className={styles.h1}>AXODOUBLE.COM</h1>
       </a>
-      <intro className={styles.normal}>Welcome to axodouble.com, <a className={styles.inversehighlight} href='https://discord.gg/Um7dr5vYK4'>join my discord</a>!<br /><br /></intro>
+      <p className={styles.normal}>
+        Welcome to axodouble.com, <a className={styles.inversehighlight} href='https://discord.gg/Um7dr5vYK4'>join my discord</a>!
+        <br /><br />
+      </p>
       <h3 className={styles.h3}>Contact me.</h3>
-      <a className={styles.highlight} href="mailto:axodouble@axodouble.com">Mail.</a><br />
-      <a className={styles.highlight} href="https://discord.gg/Um7dr5vYK4">Discord.</a><br /><br />
+      <a className={styles.highlight} href="mailto:axodouble@axodouble.com">Mail</a>
+      <br />
+      <a className={styles.highlight} href="https://discord.gg/Um7dr5vYK4">Discord</a>
+      <br /><br />
 
-      <h3 className={styles.h3}>Quote.</h3>
-      "<i><a className={styles.inversehighlight} href={quote.quote.link}>{quote.quote.text}</a></i>" - <a className={styles.inverse} href={quote.user.link}>{quote.user.text}</a>.
+      {quote && (
+        <>
+          <h3 className={styles.h3}>Quote</h3>
+          <p>
+            "<i><a className={styles.inversehighlight} href={quote.quote.link || '#'}>{quote.quote.text}</a></i>"
+            - <a className={styles.inverse} href={quote.user.link || '#'}>{quote.user.text}</a>
+          </p>
+        </>
+      )}
     </main>
   );
 }
@@ -125,7 +142,6 @@ function getRandomQuote() {
       }
     ]
 
-  let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-  noStore()
+  const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
   return randomQuote;
 }
