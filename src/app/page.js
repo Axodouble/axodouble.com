@@ -4,10 +4,21 @@ import { useEffect, useState } from 'react';
 
 export default function Home() {
   const [quote, setQuote] = useState(null);
+  const [visibleSections, setVisibleSections] = useState([]);
 
   useEffect(() => {
     setQuote(getRandomQuote());
   }, []);
+
+  const handleSectionClick = (section) => {
+    setVisibleSections(prevSections => {
+      if (prevSections.includes(section)) {
+        return prevSections.filter(sec => sec !== section);
+      } else {
+        return [...prevSections, section];
+      }
+    });
+  };
 
   return (
     <main className={styles.main}>
@@ -18,12 +29,23 @@ export default function Home() {
         Welcome to axodouble.com, <a className={styles.inversehighlight} href='https://discord.gg/Um7dr5vYK4'>join my discord</a>!
         <br /><br />
       </p>
-      <h3 className={styles.h3}>Contact me.</h3>
-      <a className={styles.highlight} href="mailto:axodouble@axodouble.com">Mail</a>
-      <br />
-      <a className={styles.highlight} href="https://discord.gg/Um7dr5vYK4">Discord</a>
-      <br /><br />
 
+      <h3 className={`${styles.h3} ${styles.clickable} ${styles.inversehighlight}`} onClick={() => handleSectionClick('aboutMe')}>
+        About me.
+      </h3> <br />
+      {visibleSections.includes('aboutMe') && (
+        <div>
+          <p>I am Axodouble, and this is still a draft.</p>
+        </div>
+      )}<br />
+      <h3 className={`${styles.h3} ${styles.clickable} ${styles.inversehighlight}`} onClick={() => handleSectionClick('contactMe')}>Contact me.</h3>
+      {visibleSections.includes('contactMe') && (
+        <div>
+          <a className={styles.inversehighlight} href="mailto:axodouble@axodouble.com">Via Mail</a><a className={styles.inverse}> or via </a><a className={styles.inversehighlight} href="https://discord.gg/Um7dr5vYK4">Discord</a>.
+        </div>
+      )}
+      
+      <br /><br />
       {quote && (
         <>
           <h3 className={styles.h3}>Quote.</h3>
