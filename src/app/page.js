@@ -56,7 +56,7 @@ export default function Home() {
       <h3 className={`${styles.h3} ${styles.clickable} ${styles.inversehighlight}`} onClick={() => handleSectionClick('contactMe')}>Contact me.</h3>
       {visibleSections.includes('contactMe') && (
         <div>
-          <a className={styles.inversehighlight} href="mailto:axodouble@axodouble.com">Via Mail</a><a className={styles.inverse}> or via </a><a className={styles.inversehighlight} href="https://discord.gg/Um7dr5vYK4">Discord</a>.
+          Via <a className={styles.highlight} href="mailto:axodouble@axodouble.com">Mail</a> or via <a className={styles.highlight} href="https://discord.gg/Um7dr5vYK4">Discord</a>.
         </div>
       )}
 
