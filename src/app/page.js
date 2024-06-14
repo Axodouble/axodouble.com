@@ -10,6 +10,10 @@ export default function Home() {
     setQuote(getRandomQuote());
   }, []);
 
+  const getNewQuote = () => {
+    setQuote(getRandomQuote());
+  };
+
   const handleSectionClick = (section) => {
     setVisibleSections(prevSections => {
       if (prevSections.includes(section)) {
@@ -35,7 +39,18 @@ export default function Home() {
       </h3> <br />
       {visibleSections.includes('aboutMe') && (
         <div>
-          <p>I am Axodouble, and this is still a draft.</p>
+          <p>Hello! I am Axodouble.
+            I am a Netherlands-based Developer and specialize primarily in making reliable back-end infrastructure.
+            As you might be able to tell I have less experience in front-end design as much as I hate to admit;
+            however I do pride myself in my ability to create reliable infrastructure to support large operations.
+            I host a significant amount of my services locally as a platform to develop on.
+            This not only cuts down costs but also allows me to work with and learn other platforms of infrastructure.
+
+            I have been working with computers for as long as I can remember as I was born around the advent of modern
+            internet infrastructure. Over the years I have spent a significant amount of time in communities to learn-
+            more about the general infrastructure of the modern web; this has given me the ability to work in different-
+            positions with companies that require a more specialized and reliable approach to their internet infrastructure.
+          </p>
         </div>
       )}<br />
       <h3 className={`${styles.h3} ${styles.clickable} ${styles.inversehighlight}`} onClick={() => handleSectionClick('contactMe')}>Contact me.</h3>
@@ -44,11 +59,11 @@ export default function Home() {
           <a className={styles.inversehighlight} href="mailto:axodouble@axodouble.com">Via Mail</a><a className={styles.inverse}> or via </a><a className={styles.inversehighlight} href="https://discord.gg/Um7dr5vYK4">Discord</a>.
         </div>
       )}
-      
+
       <br /><br />
       {quote && (
         <>
-          <h3 className={styles.h3}>Quote.</h3>
+          <h3 className={`${styles.h3} ${styles.clickable} ${styles.inversehighlight}`} onClick={() => getNewQuote()}>Quote.</h3>
           <p>
             "<i><a className={styles.inversehighlight} href={quote.quote.link || '#'}>{quote.quote.text}</a></i>"
             - <a className={styles.inverse} href={quote.user.link || '#'}>{quote.user.text}</a>
