@@ -33,8 +33,16 @@
   color: #dfdfdf;
 }
 
+.clickable {
+  cursor: pointer;
+  display: inline-block;
+}
+
+
 .h1 {
   font-size: 20px;
+  display: inline-block;
+  user-select: none;
 }
 
 .h2,
@@ -45,4 +53,6 @@
   font-size: 16px;
   color: #6079aa;
   margin-bottom: 0px;
+  width: auto;
+  user-select: none;
 }
