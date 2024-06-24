@@ -106,6 +106,10 @@ function getRandomQuote() {
         "user": { "text": "Steven Galloway", "link": undefined }
       },
       {
+        "quote": { "text" : "Sometimes everything I make just feels like an elaborate scheme to get the people close to me to tell me good job.", "link": undefined }
+        "user": { "text": "Axodouble", "link": undefined }
+      },
+      {
         "quote": { "text": "You can't call yourself peaceful if you're not capable of violence. If you're not capable of violence, you're not peaceful; you're harmless.", "link": undefined },
         "user": { "text": "Someone", "link": undefined }
       },
