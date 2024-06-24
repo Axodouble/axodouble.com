@@ -106,7 +106,7 @@ function getRandomQuote() {
         "user": { "text": "Steven Galloway", "link": undefined }
       },
       {
-        "quote": { "text" : "Sometimes everything I make just feels like an elaborate scheme to get the people close to me to tell me good job.", "link": undefined }
+        "quote": { "text" : "Sometimes everything I make just feels like an elaborate scheme to get the people close to me to tell me good job.", "link": undefined },
         "user": { "text": "Axodouble", "link": undefined }
       },
       {
