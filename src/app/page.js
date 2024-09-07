@@ -40,16 +40,16 @@ export default function Home() {
       {visibleSections.includes('aboutMe') && (
         <div className={styles.about}>
           <p>Hello! I am Axodouble.<br />
-            I am a Netherlands-based Developer and specialize primarily in making reliable back-end infrastructure.<br />
-            As you might be able to tell I have less experience in front-end design as much as I hate to admit;<br />
-            however I do pride myself in my ability to create reliable infrastructure to support large operations.<br />
-            I host a significant amount of my services locally as a platform to develop on.<br />
-            This not only cuts down costs but also allows me to work with and learn other platforms of infrastructure.<br />
-            <br />
-            I have been working with computers for as long as I can remember as I was born around the advent of modern<br />
-            internet infrastructure. Over the years I have spent a significant amount of time in communities to learn-<br />
-            more about the general infrastructure of the modern web; this has given me the ability to work in different-<br />
-            positions with companies that require a more specialized and reliable approach to their internet infrastructure.<br />
+            I am a Netherlands-based Developer and specialize primarily in making reliable back-end infrastructure.
+            As you might be able to tell I have less experience in front-end design as much as I hate to admit;
+            however I do pride myself in my ability to create reliable infrastructure to support large operations.
+            I host a significant amount of my services locally as a platform to develop on.
+            This not only cuts down costs but also allows me to work with and learn other platforms of infrastructure.
+            <br /><br />
+            I have been working with computers for as long as I can remember as I was born around the advent of modern
+            internet infrastructure. Over the years I have spent a significant amount of time in communities to learn-
+            more about the general infrastructure of the modern web; this has given me the ability to work in different-
+            positions with companies that require a more specialized and reliable approach to their internet infrastructure.
           </p>
         </div>
       )}<br />
@@ -104,6 +104,10 @@ function getRandomQuote() {
       {
         "quote": { "text": "A weapon does not decide whether or not to kill. A weapon is a manifestation of a decision that has already been made.", "link": "https://www.amazon.com/Cellist-Sarajevo-Steven-Galloway/dp/1594483655" },
         "user": { "text": "Steven Galloway", "link": undefined }
+      },
+      {
+        "quote": { "text" : "Sometimes everything I make just feels like an elaborate scheme to get the people close to me to tell me good job.", "link": undefined },
+        "user": { "text": "Axodouble", "link": undefined }
       },
       {
         "quote": { "text": "You can't call yourself peaceful if you're not capable of violence. If you're not capable of violence, you're not peaceful; you're harmless.", "link": undefined },
