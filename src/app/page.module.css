@@ -1,9 +1,7 @@
 .main {
-  padding: 20px;
-  color: #6079aa;
-  font-family: "Roboto Mono";
+  color: #b6b6b6;
+  font-family: Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
   font-size: 14px;
-  line-height: 22px;
   margin: 0 auto;
   max-width: 960px;
   text-align: center;
@@ -14,26 +12,26 @@
   text-align: left;
 }
 .normal {
-  color: #6079aa;
+  color: #b6b6b6;
   text-decoration: none;
 }
 .inverse {
-  color: #dfdfdf;
+  color: #b6b6b6;
   text-decoration: none;
 }
 .highlight {
-  color: #dfdfdf;
+  color: #ffffff;
   text-decoration: none;
 }
 .highlight:hover {
-  color: #6079aa;
+  color: #b6b6b6;
 }
 .inversehighlight {
-  color: #6079aa;
+  color: #b6b6b6;
   text-decoration: none;
 }
 .inversehighlight:hover {
-  color: #dfdfdf;
+  color: #ffffff;
 }
 
 .clickable {
@@ -53,8 +51,8 @@
 .h5,
 .h6 {
   font-size: 16px;
-  color: #6079aa;
-  margin-bottom: 0px;
+  color: #b6b6b6;
+  margin-bottom: -10px;
   width: auto;
   user-select: none;
 }

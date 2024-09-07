@@ -26,17 +26,9 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <a className={styles.normal} href="https://axodouble.com/">
-        <h1 className={styles.h1}>AXODOUBLE.COM</h1>
-      </a>
-      <p className={styles.normal}>
-        Welcome to axodouble.com, <a className={styles.inversehighlight} href='https://discord.gg/Um7dr5vYK4'>join my discord</a>!
-        <br /><br />
-      </p>
-
       <h3 className={`${styles.h3} ${styles.clickable} ${styles.inversehighlight}`} onClick={() => handleSectionClick('aboutMe')}>
-        About me.
-      </h3> <br />
+        about me
+      </h3>
       {visibleSections.includes('aboutMe') && (
         <div className={styles.about}>
           <p>Hello! I am Axodouble.<br />
@@ -53,17 +45,16 @@ export default function Home() {
           </p>
         </div>
       )}<br />
-      <h3 className={`${styles.h3} ${styles.clickable} ${styles.inversehighlight}`} onClick={() => handleSectionClick('contactMe')}>Contact me.</h3>
+      <h3 className={`${styles.h3} ${styles.clickable} ${styles.inversehighlight}`} onClick={() => handleSectionClick('contactMe')}>contact me</h3>
       {visibleSections.includes('contactMe') && (
         <div>
           Via <a className={styles.highlight} href="mailto:axodouble@axodouble.com">Mail</a> or via <a className={styles.highlight} href="https://discord.gg/Um7dr5vYK4">Discord</a>.
         </div>
       )}
-
-      <br /><br />
+      <br />
       {quote && (
         <>
-          <h3 className={`${styles.h3} ${styles.clickable} ${styles.inversehighlight}`} onClick={() => getNewQuote()}>Quote.</h3>
+          <h3 className={`${styles.h3} ${styles.clickable} ${styles.inversehighlight}`} onClick={() => getNewQuote()}>quote</h3>
           <p>
             "<i><a className={styles.inversehighlight} href={quote.quote.link || '#'}>{quote.quote.text}</a></i>"
             - <a className={styles.inverse} href={quote.user.link || '#'}>{quote.user.text}</a>
