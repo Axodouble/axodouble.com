@@ -1,69 +1,28 @@
-"use client"
+"use client";
+
+import { useState, useEffect } from 'react';
 import styles from "./page.module.css";
-import { useEffect, useState } from 'react';
 
 export default function Home() {
   const [quote, setQuote] = useState(null);
-  const [visibleSections, setVisibleSections] = useState([]);
 
   useEffect(() => {
-    setQuote(getRandomQuote());
+    const randomQuote = getRandomQuote();
+    setQuote(randomQuote);
   }, []);
 
-  const getNewQuote = () => {
-    setQuote(getRandomQuote());
-  };
-
-  const handleSectionClick = (section) => {
-    setVisibleSections(prevSections => {
-      if (prevSections.includes(section)) {
-        return prevSections.filter(sec => sec !== section);
-      } else {
-        return [...prevSections, section];
-      }
-    });
-  };
+  if (!quote) return null;
 
   return (
     <main className={styles.main}>
-      <h3 className={`${styles.h3} ${styles.clickable} ${styles.inversehighlight}`} onClick={() => handleSectionClick('aboutMe')}>
-        about me
-      </h3>
-      {visibleSections.includes('aboutMe') && (
-        <div className={styles.about}>
-          <p>Hello! I am Axodouble.<br />
-            I am a Netherlands-based Developer and specialize primarily in making reliable back-end infrastructure.
-            As you might be able to tell I have less experience in front-end design as much as I hate to admit;
-            however I do pride myself in my ability to create reliable infrastructure to support large operations.
-            I host a significant amount of my services locally as a platform to develop on.
-            This not only cuts down costs but also allows me to work with and learn other platforms of infrastructure.
-            <br /><br />
-            I have been working with computers for as long as I can remember as I was born around the advent of modern
-            internet infrastructure. Over the years I have spent a significant amount of time in communities to learn-
-            more about the general infrastructure of the modern web; this has given me the ability to work in different-
-            positions with companies that require a more specialized and reliable approach to their internet infrastructure.
-          </p>
-        </div>
-      )}<br />
-      <h3 className={`${styles.h3} ${styles.clickable} ${styles.inversehighlight}`} onClick={() => handleSectionClick('contactMe')}>contact me</h3>
-      {visibleSections.includes('contactMe') && (
-        <div>
-          Via <a className={styles.highlight} href="mailto:axodouble@axodouble.com">Mail</a> or via <a className={styles.highlight} href="https://discord.gg/Um7dr5vYK4">Discord</a>.
-        </div>
-      )}
-      <br />
-      {quote && (
-        <>
-          <h3 className={`${styles.h3} ${styles.clickable} ${styles.inversehighlight}`} onClick={() => getNewQuote()}>quote</h3>
-          <p>
-            "<i><a className={styles.inversehighlight} href={quote.quote.link || '#'}>{quote.quote.text}</a></i>"
-            - <a className={styles.inverse} href={quote.user.link || '#'}>{quote.user.text}</a>
-          </p>
-        </>
-      )}
+      <span>
+        <blockquote><a className={styles.quote} href={quote.quote.link || '#'}>{quote.quote.text}</a></blockquote>
+        - <a className={styles.clickable} href={quote.user.link || '#'}>{quote.user.text}</a>
+      </span>
     </main>
   );
 }
+
 
 function getRandomQuote() {
   const quotes =
@@ -97,7 +56,7 @@ function getRandomQuote() {
         "user": { "text": "Steven Galloway", "link": undefined }
       },
       {
-        "quote": { "text" : "Sometimes everything I make just feels like an elaborate scheme to get the people close to me to tell me good job.", "link": undefined },
+        "quote": { "text": "Sometimes everything I make just feels like an elaborate scheme to get the people close to me to tell me good job.", "link": undefined },
         "user": { "text": "Axodouble", "link": undefined }
       },
       {

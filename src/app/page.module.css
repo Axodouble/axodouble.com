@@ -1,37 +1,13 @@
 .main {
-  color: #b6b6b6;
-  font-family: Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
+  color: #a6a6a6;
+  font-family: Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console",
+    monospace;
   font-size: 14px;
   margin: 0 auto;
   max-width: 960px;
   text-align: center;
   text-decoration: none;
-}
-
-.about {
-  text-align: left;
-}
-.normal {
-  color: #b6b6b6;
-  text-decoration: none;
-}
-.inverse {
-  color: #b6b6b6;
-  text-decoration: none;
-}
-.highlight {
-  color: #ffffff;
-  text-decoration: none;
-}
-.highlight:hover {
-  color: #b6b6b6;
-}
-.inversehighlight {
-  color: #b6b6b6;
-  text-decoration: none;
-}
-.inversehighlight:hover {
-  color: #ffffff;
+  text-decoration-line: none;
 }
 
 .clickable {
@@ -39,20 +15,17 @@
   display: inline-block;
 }
 
-.h1 {
-  font-size: 20px;
-  display: inline-block;
-  user-select: none;
+.quote {
+  color: #c7c7c7;
+}
+.quote:hover {
+  color: #d1d1d1;
 }
 
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-size: 16px;
-  color: #b6b6b6;
-  margin-bottom: -10px;
-  width: auto;
-  user-select: none;
+.main blockquote:before {
+  content: open-quote;
+}
+
+.main blockquote:after {
+  content: close-quote;
 }

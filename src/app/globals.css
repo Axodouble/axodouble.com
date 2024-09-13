@@ -1,24 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
 
-    html,
-    body {
-      height: 100%;
-      margin: 0;
-      background-color: #161616;
-      color: #a6a6a6;
-    }
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #161616;
+  color: #a6a6a6;
+  font-family: Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console",
+    monospace;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  text-decoration: none;
+}
 
-    body {
-      font-family: Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
-      display: grid;
-      place-content: center;
-      place-items: center;
-    }
+a {
+  color: #a6a6a6;
+  text-decoration: none;
+}
 
-    a {
-      color: #ffffff;
-    }
-
-    svg {
-      height: 15rem;
-    }
+svg {
+  height: 15rem;
+}
