@@ -2,12 +2,12 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Ceraia</title>
+  <title>Axodouble</title>
   <link rel="shortcut icon" href="favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ceraia, a creative project by Axodouble.">
+  <meta name="description" content="Axodouble">
   <meta name="keywords" content="ceraia, entropy, axodouble, ceraia community">
-  <link rel="canonical" href="https://ceraia.com">
+  <link rel="canonical" href="https://axodouble.com">
   <style>
     html,
     body {
@@ -422,27 +422,70 @@
     <a target="_blank" rel="noopener">Axodouble</a>;<br>
   </span>
   <span>
+    <span id="random-quote" onclick="randomQuote()"></span>
+  </span>
+  <span>
     <a href="#" onclick="toggleContent('about')">About</a>;
     <a href="#" onclick="toggleContent('contact')">Contact</a>;
   </span>
   <span>
-    <div id="about" style="display: none;">Axodouble is the online name used by Jasper for creative projects or online contact.<br>
-       I am a Netherlands-based Developer and specialize primarily in making reliable back-end infrastructure.<br>
-            As you might be able to tell I have less experience in front-end design as much as I hate to admit;<br>
-            however I do pride myself in my ability to create reliable infrastructure to support large operations.<br>
-            I host a significant amount of my services locally as a platform to develop on.<br>
-            This not only cuts down costs but also allows me to work with and learn other platforms of infrastructure.<br>
-            <br /><br />
-            I have been working with computers for as long as I can remember as I was born around the advent of modern<br>
-            internet infrastructure. Over the years I have spent a significant amount of time in communities to learn-<br>
-            more about the general infrastructure of the modern web; this has given me the ability to work in different-<br>
-            positions with companies that require a more specialized and reliable approach to their internet infrastructure.<br></div>
+    <div id="about" style="display: none;">Axodouble is the online name used by Jasper for creative projects or online
+      contact.<br>
+      I am a Netherlands-based Developer and specialize primarily in making reliable back-end infrastructure.<br>
+      As you might be able to tell I have less experience in front-end design as much as I hate to admit;<br>
+      however I do pride myself in my ability to create reliable infrastructure to support large operations.<br>
+      I host a significant amount of my services locally as a platform to develop on.<br>
+      This not only cuts down costs but also allows me to work with and learn other platforms of infrastructure.<br>
+      <br /><br />
+      I have been working with computers for as long as I can remember as I was born around the advent of modern<br>
+      internet infrastructure. Over the years I have spent a significant amount of time in communities to learn-<br>
+      more about the general infrastructure of the modern web; this has given me the ability to work in different-<br>
+      positions with companies that require a more specialized and reliable approach to their internet
+      infrastructure.<br>
+    </div>
     <div id="contact" style="display: none;">Contact me via <a href="mailto:axodouble@axodouble.com">mail</a>.<br>
       You can also add me on Discord @axodouble.
     </div>
   </span>
   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      randomQuote()
+    });
+
     const toggledContent = [];
+
+    function randomQuote() {
+      const quotes = [
+        "If you were a worm I would shake you every day until you die of a severe brain concussion. - Jazzodouble",
+        "There is a price to pay for speaking the truth. There is a bigger price for living a lie. - Miku",
+        "Men don't even know what they're doing half the time- like- - Jazzodouble",
+        "It's getting pretty caucasian in here. - Metshtival",
+        "Money can't buy back your youth when you're old, a friend when you're lonely, or peace to your soul. - Johnny Cash",
+        "Can't shake the devil's hand and say you're only kidding. - They Might Be Giants",
+        "A weapon does not decide whether or not to kill. A weapon is a manifestation of a decision that has already been made. - Steven Galloway",
+        "Sometimes everything I make just feels like an elaborate scheme to get the people close to me to tell me good job. - Axodouble",
+        "You can't call yourself peaceful if you're not capable of violence. If you're not capable of violence, you're not peaceful; you're harmless. - Someone",
+        "I do believe that, where there is only a choice between cowardice and violence, I would advise violence. - Mahatma Gandhi",
+        "Then there was the war, and I married it because there was nothing else when I reached the age of falling in love. - Guy Sajer",
+        "I fear all we have done is to awaken a sleeping giant and fill him with a terrible resolve. - Isoroku Yamamoto",
+        "Your mind will always shutdown before your body, only way to test your full potential is to get pushed to your limits. - Galah",
+        "Despite all my beans, I'm still just a rat in some jeans. - Jazzodouble",
+        "It is what it is. - ZoliWorks",
+        "I hate the word homophobia. It's not a phobia. You're not scared. You're an asshole. - Morgan Freeman",
+        "If you're not in the state of post-nut clarity, you're in state of pre-nut delusion. - Taki",
+        "My doctrines exist to rid maternity hospitals of their horror, to preserve the wife for her husband and the mother for her child. - Ignaz Semmelweis",
+        "There is no real ending. It's just the place where you stop the story. - Frank Herbert",
+        "A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die, and a new generation grows up that is familiar with it. - Max Planck",
+        "It is not the strongest of the species that survives, nor the most intelligent that survives. It is the one that is most adaptable to change. - Charles Darwin",
+        "School taught us that your skull is designed to protect your brain, you reach the streets and you realize that your brain is what you use to protect your skull. - Bamodu",
+        "Don't waste your time chasing butterflies. Mend your garden, and the butterflies will come. - Mário Quintana",
+        "I am da biggest bird. - Stan",
+        "There are no laws against the pokemon, batman. - Dylan",
+        "Do you think the children have 20 or fewer hitpoints? - Jasperagus"
+      ];
+
+      document.getElementById("random-quote").textContent = quotes[Math.floor(Math.random() * quotes.length)];
+    }
 
     function toggleContent(id) {
       toggledContent.forEach((contentId) => {
