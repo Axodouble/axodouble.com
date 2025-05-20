@@ -2,29 +2,49 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Ceraia</title>
+  <title>Axodouble</title>
   <link rel="shortcut icon" href="favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ceraia, a creative project by Axodouble.">
-  <meta name="keywords" content="ceraia, entropy, axodouble, ceraia community">
-  <link rel="canonical" href="https://ceraia.com">
+  <meta name="description" content="Axodouble, a homepage for Axodouble and his projects.">
+  <meta name="keywords" content="axodouble, axodouble.com, entropy, axodouble, ceraia community">
+  <link rel="canonical" href="https://axodouble.com">
   <style>
     html,
     body {
       height: 100%;
       margin: 0;
+      padding: 0;
       background-color: #161616;
       color: #a6a6a6;
-      /* text-align: center; */
+      overflow-y: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      display: none;
     }
 
     body {
       font-family: Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
-      display: grid;
-      place-content: center;
-      place-items: center;
-      margin-left: 20%;
-      margin-right: 20%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .5rem;
+      margin: 0;
+      padding-left: 10%;
+      padding-right: 10%;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .content-wrapper {
+      width: 100%;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       gap: .5rem;
     }
 
@@ -48,90 +68,113 @@
 </head>
 
 <body>
-  <svg>
-    <image href="dev.svg" width="100%" height="100%" />
-  </svg>
-  <span>
-    <a target="_blank" rel="noopener">Axodouble</a>;<br>
-  </span>
-  <span>
-    <a href="#" onclick="toggleContent('about')">About</a>;
-    <a href="#" onclick="toggleContent('contact')">Contact</a>;
-    <a href="#" onclick="toggleContent('security')">Security</a>;
-  </span>
-  <span>
-    <div id="about" style="display: none;">
-      <h2>About Me</h2>
-      Axodouble is the online name used by Jasper for creative projects or online
-      contact.<br>
-      I am a Netherlands-based Developer and specialize primarily in making reliable back-end infrastructure.
-      <br><br>
-      I have been working with computers for as long as I can remember, this was aided by the fact I was born around the
-      advent of modern
-      internet infrastructure.
-      <br><br>Over the years I have spent a significant amount of time in communities to learn
-      more about the general infrastructure of the modern web; this has given me the ability to work in different
-      positions with companies that require a more specialized and reliable approach to their internet
-      infrastructure.<br>
-      <h2>Experience</h2>
-      As you might be able to tell I have less experience in front-end design as much as I hate to admit;<br>
-      however I do pride myself in my ability to create reliable infrastructure to support large operations.
-      I host a significant amount of my services locally as a platform to develop on.
-      This not only cuts down costs but also allows me to work with and learn other platforms of infrastructure.
-      <br /><br />
-      <h2>Work Experience</h2>
-      <h6>(Semi Redacted, <a href="mailto:axodouble@axodouble.com">Mail for more info</a>)</h6>
-      <ul>
-        <li>Sep 2023 - Current, Open Source Developer</li>
-        <li>Jan 2024 - Jun 2025 (1.5 yrs), Developer & Specialist at Hedin IT</li>
-        <li>Sep 2023 - Dec 2023 (3 mos), Developer at Cyberfusion</li>
-        <li>Feb 2023 - Aug 2023 (7 mos), IT Technician for Ziggo</li>
-        <li>Mar 2020 - Feb 2023 (3 yrs), Technician for Gr8 Hotels </li>
-      </ul>
-      <h2>Skillset</h2>
-      <ul>
-        <li>Linux - Since Mar 2019</li>
-        <li>Javascript (NodeJS) - Since Apr 2020</li>
-        <li>MongoDB - Since May 2020</li>
-        <li>PHP - Since Jul 2021</li>
-        <li>Docker - Since Jan 2022</li>
-        <li>Java (Some Kotlin too) - Since Mar 2023</li>
-        <li>Python - Since Feb 2023</li>
-        <li>Typescript (NodeJS & Bun) - Since Jan 2024</li>
-        <li>MySQL & PostgreSQL - Since Jun 2024</li>
-        <li>C# - Since Dec 2024</li>
-      </ul>
-    </div>
-    <div id="contact" style="display: none;">Contact me via <a href="mailto:axodouble@axodouble.com">mail</a>.<br>
-      You can also add me on Discord @axodouble.
-    </div>
-    <div id="security" style="display: none;">
-      <h2>Reporting a Vulnerability</h2>
-      If you discover a security vulnerability, please send an email to
-      <a href="mailto:security@ceraia.com">security@ceraia.com</a>. We take all security concerns seriously and will
-      respond
-      promptly to your report.<br>
-      <br>
-      <h2>Security Concerns</h2>
-      For any other security-related concerns or questions, please contact us at
-      <a href="mailto:security@ceraia.com">security@ceraia.com</a>.<br>
-      Thank you for helping us keep our project secure.<br>
-    </div>
+  <div class="content-wrapper">
+    <svg>
+      <image href="dev.svg" width="100%" height="100%" />
+    </svg>
+    <span>
+      <a target="_blank" rel="noopener">Axodouble</a>;<br>
+    </span>
+    <span>
+      <a href="#" onclick="toggleContent('about', 'skillset', 'workexperience')">About</a>;
+      <a href="#" onclick="toggleContent('contact')">Contact</a>;
+      <a href="#" onclick="toggleContent('security')">Security</a>;
+      <a href="#" onclick="toggleContent('skillset')">Skillset</a>;
+      <a href="#" onclick="toggleContent('workexperience')">Work</a>;
+      <a href="#" onclick="toggleContent('socials')">Socials</a>;
+
+    </span>
+    <span>
+      <div id="about" style="display: none;">
+        <h2>About Me</h2>
+        Axodouble is the online name used by Jasper for creative projects or online
+        contact.<br>
+        I am a Netherlands-based Developer and specialize primarily in making reliable back-end infrastructure.
+        <br><br>
+        I have been working with computers for as long as I can remember, this was aided by the fact I was born around
+        the
+        advent of modern
+        internet infrastructure.
+        <br><br>Over the years I have spent a significant amount of time in communities to learn
+        more about the general infrastructure of the modern web; this has given me the ability to work in different
+        positions with companies that require a more specialized and reliable approach to their internet
+        infrastructure.<br>
+        <h2>Experience</h2>
+        As you might be able to tell I have less experience in front-end design as much as I hate to admit;<br>
+        however I do pride myself in my ability to create reliable infrastructure to support large operations.
+        I host a significant amount of my services locally as a platform to develop on.
+        This not only cuts down costs but also allows me to work with and learn other platforms of infrastructure.
+        <br /><br />
+      </div>
+      <div id="skillset" style="display: none;">
+        <h2>Skillset</h2>
+        <ul>
+          <li>Linux - Since Mar 2019</li>
+          <li>Javascript (NodeJS) - Since Apr 2020</li>
+          <li>MongoDB - Since May 2020</li>
+          <li>PHP - Since Jul 2021</li>
+          <li>Docker - Since Jan 2022</li>
+          <li>Java (Some Kotlin too) - Since Mar 2023</li>
+          <li>Python - Since Feb 2023</li>
+          <li>Typescript (NodeJS & Bun) - Since Jan 2024</li>
+          <li>MySQL & PostgreSQL - Since Jun 2024</li>
+          <li>C# - Since Dec 2024</li>
+        </ul>
+      </div>
+      <div id="contact" style="display: none;">
+        <h2>Contact</h2>
+        You can contact me via <a href="mailto:axodouble@axodouble.com">mail</a>.<br>
+        You can also contact me on Discord @axodouble.
+
+        I am much more likely to respond to you via mail.
+      </div>
+      <div id="security" style="display: none;">
+        <h2>Reporting a Vulnerability</h2>
+        If you discover a security vulnerability, please send an email to
+        <a href="mailto:security@ceraia.com">security@ceraia.com</a>. We take all security concerns seriously and will
+        respond
+        promptly to your report.<br>
+        <br>
+        <h2>Security Concerns</h2>
+        For any other security-related concerns or questions, please contact us at
+        <a href="mailto:security@ceraia.com">security@ceraia.com</a>.<br>
+        Thank you for helping us keep our project secure.<br>
+      </div>
+      <div id="workexperience" style="display: none;">
+        <h2>Work Experience</h2>
+        <h6>(Semi Redacted, <a href="mailto:axodouble@axodouble.com">Mail for more info</a>)</h6>
+        <ul>
+          <li>Sep 2023 - Current, Open Source Developer</li>
+          <li>Jan 2024 - Jun 2025 (1.5 yrs), Developer & Specialist at Hedin IT</li>
+          <li>Sep 2023 - Dec 2023 (3 mos), Developer at Cyberfusion</li>
+          <li>Feb 2023 - Aug 2023 (7 mos), IT Technician for Ziggo</li>
+          <li>Mar 2020 - Feb 2023 (3 yrs), Technician for Gr8 Hotels </li>
+        </ul>
+      </div>
+      <div id="socials" style="display: none;">
+        <h2>Socials</h2>
+        <ul>
+          <li><a href="https://ceraia.com/">Ceraia</a></li>
+          <li><a href="https://github.com/Axodouble">Github</a></li>
+          <li><a href="https://steamcommunity.com/id/axodouble">Steam</a></li>
+        </ul>
+      </div>
+  </div>
   </span>
   <script>
     const toggledContent = [];
 
-    function toggleContent(id) {
-      toggledContent.forEach((contentId) => {
-        if (contentId !== id) {
-          const otherElement = document.getElementById(contentId);
-          otherElement.style.display = 'none';
-        }
-      });
-      toggledContent.push(id);
+    function toggleContent(...ids) {
+      const contentDivs = document.querySelectorAll('.content-wrapper div[id]');
 
-      const element = document.getElementById(id);
-      element.style.display = element.style.display === 'none' ? 'block' : 'none';
+      contentDivs.forEach(div => {
+        div.style.display = 'none';
+      });
+
+      ids.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) element.style.display = 'block';
+      });
     }
   </script>
 </body>
