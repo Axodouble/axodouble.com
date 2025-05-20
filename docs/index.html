@@ -52,6 +52,14 @@
       color: #27ae60;
     }
 
+    .comment {
+      color: #ffffff;
+    }
+
+    .selected {
+      color: #cfcfcf;
+    }
+
     .clickable {
       cursor: pointer;
     }
@@ -151,14 +159,17 @@
         Thank you for helping us keep our project secure.<br>
       </div>
       <div id="workexperience" style="display: none;">
-        <h2>Work Experience</h2>
-        <h6>(Semi Redacted, <a href="mailto:axodouble@axodouble.com">Mail for more info</a>)</h6>
+        <h2>Work Experience<a class="clickable" onclick="toggleComment('redacted')">*</a></h2>
+        <h6 id="redacted" style="display: none; margin-top: -20px;">*Semi redacted due to private information, <a
+            href="mailto:axodouble@axodouble.com">mail me</a> for
+          more info.</h6>
         <ul>
           <li>Sep 2023 - Current, Open Source Developer</li>
-          <li>Jan 2024 - Jun 2025 (1.5 yrs), Developer & Specialist at Hedin IT
-            <span onclick="toggleRecommendation('recommendation-hedin')" class="recommendation clickable"
+          <li>
+            Jan 2024 - Jun 2025 (1.5 yrs), Developer & Specialist at Hedin IT
+            <span onclick="toggleComment('comment-hedin')" class="recommendation clickable"
               title="With 1 recommendation">[+1]</span>
-            <span id="recommendation-hedin" class="recommendation" style="display: none;"
+            <span id="comment-hedin" class="recommendation" style="display: none;"
               title="Content hidden due to private information, available via mail.">
               +1 Recommendation by the Country Manager of Hedin IT
             </span>
@@ -219,10 +230,18 @@
       });
     }
 
-    function toggleRecommendation(id) {
+    function toggleComment(id, parent) {
       const element = document.getElementById(id);
       if (element) {
         element.style.display = element.style.display === 'none' ? 'block' : 'none';
+      }
+      if (parent) {
+        const parentElement = document.getElementById(parent);
+        if (parentElement.classList.contains('selected')) {
+          parentElement.classList.remove('selected');
+        } else {
+          parentElement.classList.add('selected');
+        }
       }
     }
 
