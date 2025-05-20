@@ -48,6 +48,14 @@
       gap: .5rem;
     }
 
+    .recommendation {
+      color: #27ae60;
+    }
+
+    .clickable {
+      cursor: pointer;
+    }
+
     a {
       color: #ffffff;
     }
@@ -76,7 +84,7 @@
       <a target="_blank" rel="noopener">Axodouble</a>;<br>
     </span>
     <span>
-      <div id="random-quote" , onclick="randomQuote()"></div>
+      <div id="random-quote" class="clickable" , onclick="randomQuote()"></div>
     </span>
     <span>
       <a href="#" onclick="toggleContent('about', 'skillset', 'workexperience')">About</a>;
@@ -147,7 +155,14 @@
         <h6>(Semi Redacted, <a href="mailto:axodouble@axodouble.com">Mail for more info</a>)</h6>
         <ul>
           <li>Sep 2023 - Current, Open Source Developer</li>
-          <li>Jan 2024 - Jun 2025 (1.5 yrs), Developer & Specialist at Hedin IT</li>
+          <li>Jan 2024 - Jun 2025 (1.5 yrs), Developer & Specialist at Hedin IT
+            <span onclick="toggleRecommendation('recommendation-hedin')" class="recommendation clickable"
+              title="With 1 recommendation">[+1]</span>
+            <span id="recommendation-hedin" class="recommendation" style="display: none;"
+              title="Content hidden due to private information, available via mail.">
+              +1 Recommendation by the Country Manager of Hedin IT
+            </span>
+          </li>
           <li>Sep 2023 - Dec 2023 (3 mos), Developer at Cyberfusion</li>
           <li>Feb 2023 - Aug 2023 (7 mos), IT Technician for Ziggo</li>
           <li>Mar 2020 - Feb 2023 (3 yrs), Technician for Gr8 Hotels </li>
@@ -214,6 +229,14 @@
         if (element) element.style.display = 'block';
       });
     }
+
+    function toggleRecommendation(id) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.style.display = element.style.display === 'none' ? 'block' : 'none';
+      }
+    }
+
   </script>
 </body>
 
